@@ -13,6 +13,12 @@
 <body>
     <form>
         <div>
+            Randomness source: <code id="random_source">(uninitialized)</code>
+            <script type="application/javascript">
+                document.getElementById('random_source').innerText = random_source
+            </script>
+        </div>
+        <div>
             <button type="button" onclick="this.form.pw.value = gen_password(this.form.n.value, this.form.method.value)">Generate Password</button>
             <input type="text" name="pw" size="60" />
         </div>
