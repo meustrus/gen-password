@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Password Generator</title>
+    <script type="application/javascript" src="gen-password.js"></script>
+    <style type="text/css">
+        div { margin: 0 0 .2em }
+        input[type="number"] { width: 3em }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div>
+            <button type="button" onclick="this.form.pw.value = gen_password(this.form.n.value, this.form.method.value)">Generate Password</button>
+            <input type="text" name="pw" size="60" />
+        </div>
+        <div>
+            <input type="number" name="n" min="1" value="4" />
+            <select name="method">
+                <option value="dictionary">Word(s)</option>
+                <option value="ascii">ASCII Character(s)</option>
+                <option value="alphanumeric">Alphanumeric Character(s)</option>
+            </select>
+        </div>
+    </form>
+</body>
+
+</html>
